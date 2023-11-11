@@ -15,6 +15,8 @@ namespace QuanLySieuThi.Areas.Admin.Controllers
             BillBUS billBus = new BillBUS();
             List<Bill> listbill = billBus.GetAll().OrderByDescending(x => x.ID).ToList();
             ViewBag.ListBill = listbill;
+            ProductBUS bus = new ProductBUS();
+            ViewBag.Products = bus.GetProducts();
             return View();
         }
     }

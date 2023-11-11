@@ -20,20 +20,10 @@ namespace QuanLySieuThi.Controllers
         public ActionResult Product(int id)
         {
             ProductBUS bus = new ProductBUS();
-            EventBUS eventBUS = new EventBUS();
-            Event evt = eventBUS.GetCurrentEvent();
+          
             Product p = bus.GetProduct(id);
             ViewBag.product = p;
-            if (evt != null)
-            {
-                EventDetail detail = evt.EventDetails.FirstOrDefault(d => d.ProductID == p.ID);
-                if (detail != null)
-                {
-                    ViewBag.eventDetail = detail;
-                }
-            }
-
-
+          
             CommentBUS commentBUS = new CommentBUS();
 
             List<Comment> comments = commentBUS.GetCommentByProductId(id);

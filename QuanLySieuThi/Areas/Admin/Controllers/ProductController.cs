@@ -22,8 +22,6 @@ namespace QuanLySieuThi.Areas.Admin.Controllers
         [CommonAttributeFilter]
         public ActionResult Edit(int id)
         {
-            SupplierBUS supplierBUS = new SupplierBUS();
-            ViewBag.Suppliers = supplierBUS.GetSuppliers();
             ProductBUS bus = new ProductBUS();
             Product prod = bus.GetProduct(id);
             ViewBag.Product = prod;
@@ -53,9 +51,7 @@ namespace QuanLySieuThi.Areas.Admin.Controllers
         }
         [CommonAttributeFilter]
         public ActionResult Add()
-        {
-            SupplierBUS supplierBUS = new SupplierBUS();
-            ViewBag.Suppliers = supplierBUS.GetSuppliers();
+        {   
             return View();
         }
         [HttpPost]

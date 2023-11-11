@@ -33,8 +33,7 @@ namespace QuanLySieuThi.Controllers
         [AnonymousFilter]
         public ActionResult Login(string loginType, string username, string password)
         {
-            if (loginType.Equals("customer"))
-            {
+           
                 CustomerBUS customerBUS = new CustomerBUS();
                 Customer customer = customerBUS.Authenticate(username, Utils.Utils.GetMD5(password));
                 if (customer != null)
@@ -48,12 +47,7 @@ namespace QuanLySieuThi.Controllers
                     TempData["username"] = username;
                     return RedirectToAction("Index", "Login");
                 }
-            }
-            else
-            {
-                EmployeeBUS employeeBUS = new EmployeeBUS();
-                return RedirectToAction("Index");
-            }
+           
             //// Authenticate the user here using the provided username and password
             //if (true)
             //{

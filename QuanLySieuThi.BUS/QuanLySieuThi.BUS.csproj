@@ -56,12 +56,8 @@
     <Compile Include="CategoryBUS.cs" />
     <Compile Include="CommentBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
-    <Compile Include="EmployeeBUS.cs" />
-    <Compile Include="EventBUS.cs" />
-    <Compile Include="ImportBillBUS.cs" />
     <Compile Include="ProductBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SupplierBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuanLySieuThi.DAO\QuanLySieuThi.DAO.csproj">

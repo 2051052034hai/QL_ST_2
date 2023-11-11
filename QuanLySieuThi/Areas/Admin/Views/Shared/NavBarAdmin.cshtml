@@ -10,58 +10,19 @@
                     <li class="nav-divider">
                         Menu
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">Dashboard <span class="badge badge-success">6</span></a>
-                        <div id="submenu-1" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                            </ul>
-                        </div>
-                    </li>
 
-                    @*<li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5">Tables</a>
-                        <div id="submenu-5" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/general-table.html">General Tables</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/data-tables.html">Data Tables</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>*@
-
-                    <li class="nav-item ">
-                        @Html.ActionLink("Chart", "Index", "ChartProduct", null, new { @class = "nav-link" })
-
-                    </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Products", "Index", "Product", null, new { @class = "nav-link" })
+                        @Html.ActionLink("Sản phẩm", "Index", "Product", null, new { @class = "nav-link" })
                     </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("Users", "Index", "User", null, new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item">
 
-                        @Html.ActionLink("Customers", "Index", "Customer", null, new { @class = "nav-link" })
-                    </li>
                     <li class="nav-item">
-
-                        @Html.ActionLink("Categories", "Index", "Category", null, new { @class = "nav-link" })
+                        @Html.ActionLink("Loại sản phẩm", "Index", "Category", null, new { @class = "nav-link" })
                     </li>
+
                     <li class="nav-item">
-
-                        @Html.ActionLink("Suppliers", "Index", "Supplier", null, new { @class = "nav-link" })
+                        @Html.ActionLink("Người dùng", "Index", "Customer", null, new { @class = "nav-link" })
                     </li>
-                    <li class="nav-item">
 
-                        @Html.ActionLink("Events", "Index", "Event", null, new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item">
-
-                        @Html.ActionLink("Import", "Index", "Import", null, new { @class = "nav-link" })
-                    </li>
                 </ul>
             </div>
         </nav>

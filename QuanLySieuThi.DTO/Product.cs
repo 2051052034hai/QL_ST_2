@@ -14,8 +14,6 @@ namespace QuanLySieuThi.DTO
         {
             BillDetails = new HashSet<BillDetail>();
             Comments = new HashSet<Comment>();
-            EventDetails = new HashSet<EventDetail>();
-            ImportBillDetails = new HashSet<ImportBillDetail>();
         }
         public Product(string productName, string unitPrice, string unitInStock, string cateID, string suppilerID, string description, string image_Url)
         {
@@ -57,10 +55,6 @@ namespace QuanLySieuThi.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comment> Comments { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<EventDetail> EventDetails { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ImportBillDetail> ImportBillDetails { get; set; }
+        
     }
 }
