@@ -130,19 +130,7 @@
                     </select>
                     <span class="form-message"></span>
                 </div>
-                <div class="dropdown">
-                    <label>Chọn nhà cung ứng: </label>
-                    <select class="form-control" id="SupplierID" name="SupplierID">
-                        @foreach (var supplier in ViewBag.Suppliers)
-                        {
-
-                            <option value="@supplier.ID">
-                                @supplier.Name
-                            </option>
-                        }
-                    </select>
-                    <span class="form-message"></span>
-                </div>
+                
                 <div class="form-item">
                     <label>Mô tả: </label>
                     <textarea id="Description" name="Description" class=" form-control" type="text" placeholder="Nhập mô tả"></textarea>
