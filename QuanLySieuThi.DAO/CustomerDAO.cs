@@ -85,14 +85,6 @@ namespace QuanLySieuThi.DAO
                             context.Entry(bill).State = EntityState.Modified;
                             context.SaveChanges();
                         }
-
-                        List<Comment> comments = context.Comments.Where(e => e.CustomerID == customerId).ToList();
-                        foreach(var comment in comments)
-                        {
-                            comment.CustomerID = null;
-                            context.Entry(comment).State = EntityState.Modified;
-                            context.SaveChanges();
-                        }
                     }
                     context.Customers.Remove(customer);
                     transaction.Commit();

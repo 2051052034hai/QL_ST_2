@@ -54,7 +54,6 @@
     <Compile Include="BillBUS.cs" />
     <Compile Include="BillDetailBUS.cs" />
     <Compile Include="CategoryBUS.cs" />
-    <Compile Include="CommentBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="ProductBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

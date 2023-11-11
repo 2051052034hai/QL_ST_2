@@ -13,7 +13,7 @@ namespace QuanLySieuThi.DTO
         public Customer()
         {
             Bills = new HashSet<Bill>();
-            Comments = new HashSet<Comment>();
+            
         }
 
         public Customer(string customerName, string customerAddress, string customerPhone, string password, string username)
@@ -49,7 +49,5 @@ namespace QuanLySieuThi.DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
     }
 }

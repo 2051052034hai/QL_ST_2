@@ -55,7 +55,6 @@
     <Compile Include="BillDAO.cs" />
     <Compile Include="BillDetailDAO.cs" />
     <Compile Include="CategoryDAO.cs" />
-    <Compile Include="CommentDAO.cs" />
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="ProductDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

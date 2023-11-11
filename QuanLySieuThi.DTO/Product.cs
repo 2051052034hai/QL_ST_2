@@ -13,7 +13,6 @@ namespace QuanLySieuThi.DTO
         public Product()
         {
             BillDetails = new HashSet<BillDetail>();
-            Comments = new HashSet<Comment>();
         }
         public Product(string productName, string unitPrice, string unitInStock, string cateID, string suppilerID, string description, string image_Url)
         {
@@ -51,9 +50,6 @@ namespace QuanLySieuThi.DTO
         public virtual ICollection<BillDetail> BillDetails { get; set; }
 
         public virtual Category Category { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comment> Comments { get; set; }
 
         
     }

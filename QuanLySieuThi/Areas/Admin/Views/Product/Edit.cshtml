@@ -115,7 +115,7 @@
 
                 <div class="form-item">
                     <label>Số lượng: </label>
-                    <input id="UnitInStock" name="UnitInStock" class=" form-control" value="@ViewBag.Product.UnitInStock" type="text" readonly placeholder="Nhập số lượng sản phẩm.">
+                    <input id="UnitInStock" name="UnitInStock" class=" form-control" value="@ViewBag.Product.UnitInStock" type="text" placeholder="Nhập số lượng sản phẩm.">
                     <span class="form-message"></span>
                 </div>
 
@@ -134,29 +134,6 @@
                             {
                                 <option value="@cate.ID">
                                     @cate.Name
-                                </option>
-                            }
-                        }
-                    </select>
-                    <span class="form-message"></span>
-
-                </div>
-
-                <div class="dropdown">
-                    <label>Chọn nhà cung ứng: </label>
-                    <select class="form-control" id="SupplierID" name="SupplierID">
-                        @foreach (var supplier in ViewBag.Suppliers)
-                        {
-                            if (supplier.ID.ToString() == @ViewBag.Product.SuppilerID)
-                            {
-                                <option value="@supplier.ID" selected>
-                                    @supplier.Name
-                                </option>
-                            }
-                            else
-                            {
-                                <option value="@supplier.ID">
-                                    @supplier.Name
                                 </option>
                             }
                         }

@@ -56,7 +56,6 @@
     <Compile Include="Bill.cs" />
     <Compile Include="BillDetail.cs" />
     <Compile Include="Category.cs" />
-    <Compile Include="Comment.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="ProductQuantitySoldModel.cs" />
