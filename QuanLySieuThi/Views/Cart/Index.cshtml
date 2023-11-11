@@ -133,7 +133,7 @@
 
                     @foreach (var item in ViewBag.Cart)
                     {
-                        <tr class="tr-view">
+                        <tr class="tr-view" style="border:1px solid #DDDDDD">
 
                             <td class="col-sm-8 col-md-6">
                                 <div class="media">
@@ -193,25 +193,8 @@
 
 
                     <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-
-
-                        <td> <h4 style="font-weight:bold">Sử dụng tích điểm:</h4>  </td>
-
-
                         <form id="myForm" method="post" action="@Url.Action("Checkout", "Cart")">
-
-                            <td style="display:flex; ">
-                                <div style="width: 20px; height: 34px; margin-top:20px" class="input-group-addon pre-amout">-</div>
-                                <input name="inputname" style="width:60px; margin-top:20px; text-align:center" type="email" class="form-control " id="input2" value="0">
-                                <div style="width: 20px; height: 34px; margin-top: 20px " class="input-group-addon plus-amout">+</div>
-                            </td>
-
                         </form>
-
                     </tr>
 
                     <tr>

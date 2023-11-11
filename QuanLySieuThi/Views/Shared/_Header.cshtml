@@ -96,21 +96,6 @@
                     <div class="ega-item-top-bar">
                         <div class="ega-top-message">
 
-
-                            @if (currentUser != null)
-                            {
-                                <span style="margin-right:50px" class="hidden-xs ega-header-top-item">
-                                    <strong>Điểm: </strong>
-                                    <strong id ="point">@currentUser.AccumulatePoint</strong>
-                                </span>
-                            }
-                            else
-                            {
-                                <span style="margin-right:50px" class="hidden-xs ega-header-top-item">
-                                    <strong>Điểm: </strong>
-                                    <strong>0</strong>
-                                </span>
-                            }
                             @if (currentUser == null)
                             {
                                 <span class="hidden-xs ega-header-top-item">

@@ -32,7 +32,7 @@ namespace QuanLySieuThi.BUS
                 return 0;
             return customerDAO.Create(customer);
         }
-        public int Update(String ID, String fullname, String phone, String address, String password, int point)
+        public int Update(String ID, String fullname, String phone, String address, String password)
         {
             CustomerDAO customerDAO = new CustomerDAO();
             Customer customer = customerDAO.GetCustomerById(int.Parse(ID));
@@ -40,7 +40,7 @@ namespace QuanLySieuThi.BUS
             customer.Phone = phone;
             customer.Address = address; 
             customer.Password = password;
-            customer.AccumulatePoint = point;
+            
             if (customerDAO.Update(customer) > 0)
                 return 1;
             return 0;
@@ -58,11 +58,10 @@ namespace QuanLySieuThi.BUS
             return 0;
         }
 
-        public int Update(int ID, int bonus)
+        public int Update(int ID)
         {
             CustomerDAO customerDAO = new CustomerDAO();
             Customer customer = customerDAO.GetCustomerById(ID);
-            customer.AccumulatePoint += bonus;
             return customerDAO.Update(customer);
         }
         public Customer Authenticate(string username, string password)

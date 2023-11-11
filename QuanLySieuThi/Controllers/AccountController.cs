@@ -39,9 +39,8 @@ namespace QuanLySieuThi.Controllers
             string phone = Request.Form["phone"];
             string address = Request.Form["address"];
             string password = Request.Form["password"];
-            string point = Request.Form["point"];
             CustomerBUS customerBUS = new CustomerBUS();
-            if (customerBUS.Update(ID, fullname, phone, address, password, Int32.Parse(point)) > 0)
+            if (customerBUS.Update(ID, fullname, phone, address, password) > 0)
             {
                 TempData["SuccessMsg"] = "Cập nhật thành công!!!";
                 Session["currentUser"] = customerBUS.GetCustomerById(Int32.Parse(ID));

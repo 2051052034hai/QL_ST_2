@@ -23,7 +23,6 @@ namespace QuanLySieuThi.DTO
             Phone = customerPhone;
             Password = password;
             UserName = username;
-            AccumulatePoint = 0;
             Bills = new HashSet<Bill>();
 
         }
@@ -46,8 +45,6 @@ namespace QuanLySieuThi.DTO
         [Required]
         [StringLength(50)]
         public string Password { get; set; }
-
-        public int? AccumulatePoint { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bill> Bills { get; set; }

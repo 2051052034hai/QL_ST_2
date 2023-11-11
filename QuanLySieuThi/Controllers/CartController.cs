@@ -172,17 +172,7 @@ namespace QuanLySieuThi.Controllers
                 Bill bill = new Bill() { CreatedDate = DateTime.Now, SubTotal = finalAmount, CustomerID = currentUser.ID };
                 billBUS.Create(bill, cart);
 
-                CustomerBUS customerBUS = new CustomerBUS();
-
-                if (currentUser.AccumulatePoint == 0)
-                {
-                    customerBUS.Update(currentUser.ID, bonus);
-                }
-                else
-                {
-                    bonus = bonus - int.Parse(inputname);
-                    customerBUS.Update(currentUser.ID, bonus);
-                }
+                CustomerBUS customerBUS = new CustomerBUS(); 
                
             }
 
