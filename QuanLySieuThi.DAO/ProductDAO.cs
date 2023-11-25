@@ -40,8 +40,22 @@ namespace QuanLySieuThi.DAO
         public void DeleteProduct(int id)
         {
             Product product = context.Products.Find(id);
-            context.Products.Remove(product);
-            context.SaveChanges();
+
+            if (product != null)
+            {
+                // Kiểm tra xem sản phẩm có liên kết với bất kỳ hóa đơn nào không
+                if (!context.BillDetails.Any(oi => oi.ProductID == id))
+                {
+                    context.Products.Remove(product);
+                    context.SaveChanges();
+                }
+                else
+                {
+                   
+                    product.deleteFlg = 1;
+                    context.SaveChanges();
+                }
+            }
         }
         public List<Product> GetProducts(Dictionary<string, string> queryParams)
         {

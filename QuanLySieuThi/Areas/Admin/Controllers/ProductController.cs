@@ -14,10 +14,20 @@ namespace QuanLySieuThi.Areas.Admin.Controllers
         // GET: Areas/ProductsList
         public ActionResult Index()
         {
+            ViewBag.SuccessMsg = TempData["SuccessMsg"];
+
+            // Tạo đối tượng của lớp ProductBUS
             ProductBUS bus = new ProductBUS();
-            ViewBag.Products = bus.GetProducts();
+
+            // Lấy ra danh sách sản phẩm có trường deleteFlg bằng 0 hoặc null
+            var products = bus.GetProducts().Where(p => p.deleteFlg == 0).ToList();
+
+            // Gán danh sách sản phẩm vào ViewBag.Products
+            ViewBag.Products = products;
+
             return View();
         }
+
 
         [CommonAttributeFilter]
         public ActionResult Edit(int id)
@@ -47,6 +57,7 @@ namespace QuanLySieuThi.Areas.Admin.Controllers
         {
             ProductBUS productBUS = new ProductBUS();
             productBUS.Delete(id);
+            TempData["SuccessMsg"] = "Xoá sản phẩm thành công";
             return RedirectToAction("Index", "Product");
         }
         [CommonAttributeFilter]

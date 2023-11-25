@@ -23,6 +23,7 @@ namespace QuanLySieuThi.DTO
             SuppilerID = suppilerID;
             Description = description;
             Image_Url = image_Url;
+           
         }
 
         public int ID { get; set; }
@@ -50,7 +51,6 @@ namespace QuanLySieuThi.DTO
         public virtual ICollection<BillDetail> BillDetails { get; set; }
 
         public virtual Category Category { get; set; }
-
-        
+        public int deleteFlg { get; set; }
     }
 }
